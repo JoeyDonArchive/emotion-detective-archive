@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"emolyzerui596be0f8": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}

@@ -1,0 +1,104 @@
+$plyr_annotate_symbol_height: 8px;
+
+.plyr {
+    user-select: none;
+}
+
+.plyr__annotate__block {
+    display: block;
+    position: absolute;
+    height: 28px;
+    top: 0;
+    opacity: 0;
+    cursor: move;
+    z-index: 1;
+
+    &:hover, &.-active {
+        opacity: .35;
+    }
+}
+
+.plyr__annotate__handle {
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 28px;
+    top: 0;
+    opacity: 0;
+    transform: translateX(-3px);
+    cursor: col-resize;
+    z-index: 2;
+
+    &.-visible {
+        opacity: 1;
+    }
+
+    .plyr__annotate__handle__bar {
+        width: 2px;
+        height: calc(100% - #{$plyr_annotate_symbol_height} - 1px);
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        top: 0;
+        left: 50%;
+        transform: translateX(-1px);
+        z-index: 2;
+    }
+
+    .plyr__annotate__handle__symbol {
+        width: $plyr_annotate_symbol_height;
+        height: $plyr_annotate_symbol_height;
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        // background-color: #fff;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+
+        &::after {
+            content: '#';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            line-height: 1;
+            font-size: 12px;
+            font-weight: normal;
+            transform: translateX(-50%);
+        }
+    }
+
+    &.-start,
+    &.-end {
+        .plyr__annotate__handle__bar {
+            height: 100%;
+        }
+
+        .plyr__annotate__handle__symbol {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+            border-style: solid;
+
+            &::after { display: none; }
+        }
+    }
+
+    &.-start {
+        .plyr__annotate__handle__symbol {
+            border-width: $plyr_annotate_symbol_height 0 0 $plyr_annotate_symbol_height;
+            transform: translateX(0);
+        }
+    }
+
+    &.-end {
+        .plyr__annotate__handle__symbol {
+            border-width: 0 0 $plyr_annotate_symbol_height $plyr_annotate_symbol_height;
+            transform: translateX(-100%);
+        }
+    }
+}

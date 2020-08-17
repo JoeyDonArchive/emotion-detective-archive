@@ -1,0 +1,20 @@
+{
+    "js": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-emolyzer-ui-js-153406-authRole",
+            "UnauthRoleArn": "arn:aws:iam::253440118838:role/amplify-emolyzer-ui-js-153406-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::253440118838:role/amplify-emolyzer-ui-js-153406-authRole",
+            "Region": "ap-southeast-2",
+            "DeploymentBucketName": "amplify-emolyzer-ui-js-153406-deployment",
+            "UnauthRoleName": "amplify-emolyzer-ui-js-153406-unauthRole",
+            "StackName": "amplify-emolyzer-ui-js-153406",
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:253440118838:stack/amplify-emolyzer-ui-js-153406/b7ca6920-8848-11ea-bc37-0278bc173a5c",
+            "AmplifyAppId": "dqjmp46thcovp"
+        },
+        "categories": {
+            "auth": {
+                "emolyzerui596be0f8": {}
+            }
+        }
+    }
+}

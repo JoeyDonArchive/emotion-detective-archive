@@ -1,0 +1,5 @@
+// import pickle library
+@import 'node_modules/pickle.scss/pickle';
+
+// initiate pickle with $webpack option set to true
+@include pickle($webpack: true);
