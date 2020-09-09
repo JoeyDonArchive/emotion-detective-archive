@@ -1,7 +1,6 @@
 # Emotion-detective-Web-App
 
-This is a solution regarding **KPMG Technical Test**
-
+This is a prototype.
 ## Staging link
 
 #### https://d1fgqfm08fhcx.cloudfront.net
